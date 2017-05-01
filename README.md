@@ -1,3 +1,4 @@
-# E164 Fake Provider
+# Faker Provider for E164 Phone Numbers
 
-`pip install e164-fake-provider`
+`pip install faker_e164`
+

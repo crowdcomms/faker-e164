@@ -6,12 +6,12 @@ import sys
 from setuptools import setup
 
 
-name = 'e164-fake-provider'
-package = 'e164_fake_provider'
+name = 'faker_e164'
+package = 'faker_e164'
 description = 'Fake Provider to generate phone numbers.'
-url = 'https://github.com/aljp/e164-fake-provider'
+url = 'https://github.com/aljp/faker_e164'
 author = 'Adam Jacquier-Parr'
-author_email = 'aljparr0@gmail.com'
+author_email = 'aljparr0+pypi@gmail.com'
 license = 'Apache'
 
 
@@ -59,7 +59,8 @@ if sys.argv[-1] == 'publish':
         print("twine not installed.\nUse `pip install twine`.\nExiting.")
         sys.exit()
     os.system("python setup.py sdist")
-    os.system("twine upload -u '{}' -p '{}' dist/{}-{}.tar.gz".format(TWINE_USERNAME, TWINE_PASSWORD, name, version))
+    os.system("twine upload -u '{}' -p '{}' dist/{}-{}.tar.gz".format(
+        TWINE_USERNAME, TWINE_PASSWORD, name, version))
     print("You probably want to also tag the version now:")
     print("  git tag -a {0} -m 'version {0}'".format(version))
     print("  git push --tags")
@@ -82,9 +83,8 @@ setup(
         'Faker>=0.7.7'
     ],
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Web Environment',
-        'Framework :: Django',
+        'Development Status :: 3 - Alpha',
+        'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
@@ -96,6 +96,8 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Software Development :: Testing',
+        'Topic :: Utilities'
     ]
 )
