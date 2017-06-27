@@ -60,3 +60,8 @@ class E164Provider(BaseProvider):
                                                is_possible=True)
         return phonenumbers.format_number(phone_number,
                                           phonenumbers.PhoneNumberFormat.E164)
+
+    def e164(self, region_code=None, phone_number_type=phonenumbers.PhoneNumberType.MOBILE):
+        """Return a random e164 formatted phone number"""
+        phone_number_obj = phonenumbers.example_number_for_type(region_code, phone_number_type)
+        return phonenumbers.format_number(phone_number_obj, phonenumbers.PhoneNumberFormat.E164)
