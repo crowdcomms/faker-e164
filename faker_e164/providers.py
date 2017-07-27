@@ -11,7 +11,7 @@ class E164Provider(BaseProvider):
     Provider to generate random yet possible phone numbers for various countries
     
     >>> from faker import Faker
-    >>> from faker-e164 import E164Provider
+    >>> from faker_e164.providers import E164Provider
     >>> fake = Faker()
     >>> fake.add_provider(E164Provider)
     """
