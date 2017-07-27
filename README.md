@@ -2,7 +2,7 @@
 
 `pip install faker-e164`
 
-# Usage
+## Usage
 
 ```python
 from faker import Faker
