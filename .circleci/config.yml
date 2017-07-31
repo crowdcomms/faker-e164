@@ -43,9 +43,9 @@ jobs:
       - run:
           name: run tests
           command: |
-            coverage run -m unittest tests.test_providers
-            coverage report
-            coverage html
+            . coverage run -m unittest tests.test_providers
+            . coverage report
+            . coverage html
 
       - store_artifacts:
           path: htmlcov
