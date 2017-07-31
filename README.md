@@ -10,7 +10,7 @@ from faker_e164.providers import E164Provider
 fake = Faker()
 fake.add_provider(E164Provider)
 
-# To atually fake an e164 phone number
+# To actually fake an e164 phone number
 fake.e164()
 
 ```
