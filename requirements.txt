@@ -1,13 +1,2 @@
-appdirs==1.4.3
-args==0.1.0
-clint==0.5.1
 Faker==0.7.11
-packaging==16.8
 phonenumberslite==8.4.2
-pkginfo==1.4.1
-pyparsing==2.2.0
-python-dateutil==2.6.0
-requests==2.13.0
-requests-toolbelt==0.7.1
-six==1.10.0
-twine==1.8.1

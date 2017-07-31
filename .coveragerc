@@ -1,0 +1,18 @@
+[run]
+include = ./faker_e164/*.py
+omit =
+    ./*/tests/*
+    ./.venv/*
+    ./.tox/*
+note = Coverage for faker_e164
+# parallel = True
+
+[report]
+fail_under = 50
+include = ./faker_e164/*.py
+show_missing = True
+skip_covered = True
+sort = Cover
+
+[html]
+title = Coverage for faker_e164
