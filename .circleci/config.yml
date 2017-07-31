@@ -43,8 +43,10 @@ jobs:
       - run:
           name: run tests
           command: |
-            tox
+            coverage run -m unittest tests.test_providers
+            coverage report
+            coverage html
 
       - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          path: htmlcov
+          destination: htmlcov
