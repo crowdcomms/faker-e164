@@ -11,7 +11,7 @@ class E164Provider(BaseProvider):
     Provider to generate random yet possible phone numbers for various countries
     
     >>> from faker import Faker
-    >>> from faker-e164 import E164Provider
+    >>> from faker_e164.providers import E164Provider
     >>> fake = Faker()
     >>> fake.add_provider(E164Provider)
     """
@@ -60,3 +60,8 @@ class E164Provider(BaseProvider):
                                                is_possible=True)
         return phonenumbers.format_number(phone_number,
                                           phonenumbers.PhoneNumberFormat.E164)
+
+    def e164(self, region_code=None, phone_number_type=phonenumbers.PhoneNumberType.MOBILE):
+        """Return a random e164 formatted phone number"""
+        phone_number_obj = phonenumbers.example_number_for_type(region_code, phone_number_type)
+        return phonenumbers.format_number(phone_number_obj, phonenumbers.PhoneNumberFormat.E164)
