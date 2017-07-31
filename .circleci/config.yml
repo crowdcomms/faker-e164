@@ -21,31 +21,31 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+#      - restore_cache:
+#          keys:
+#            - v1-dependencies-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
+#            # fallback to using the latest cache if no exact match is found
+#            - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
-            python3 -m venv .venv
-            . .venv/bin/activate
+            python3 -m venv venv
+            . venv/bin/activate
             pip install -r test-requirements.txt
 
-      - save_cache:
-          paths:
-            - ".venv"
-          key: v1-dependencies-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
+#      - save_cache:
+#          paths:
+#            - venv
+#          key: v1-dependencies-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
 
       # run tests!
       - run:
           name: run tests
           command: |
-            . coverage run -m unittest tests.test_providers
-            . coverage report
-            . coverage html
+            coverage run -m unittest tests.test_providers
+            coverage report
+            coverage html
 
       - store_artifacts:
           path: htmlcov
