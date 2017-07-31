@@ -8,7 +8,7 @@ from setuptools import setup
 
 name = 'faker-e164'
 package = 'faker_e164'
-description = 'Fake Provider to generate phone numbers.'
+description = """Faker Provider to generate phone numbers in E164 format."""
 url = 'https://github.com/crowdcomms/faker-e164'
 author = 'Adam Jacquier-Parr'
 author_email = 'ajparr@crowdcomms.com.au'
