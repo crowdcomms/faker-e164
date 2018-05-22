@@ -27,6 +27,8 @@ Generate a random phone number for the given `region_code`, if `region_code` is 
 
 Return a phone number from a list of "safe numbers" as per https://fakenumber.org/.  Supported regions are "AU", "US", "GB", and "CA".
 
+> _Note:_ GB numbers are treated as invalid by the phonenumbers package, to get around this please use the `region_code` arg. For example: `.safe_e164('AU')`.
+
 ## Contributing
 
 Contributions for faker-e164 are welcomed by the community. If you are looking for issues to work on, please visit [the issues tab](https://github.com/crowdcomms/faker-e164/issues). If you have an idea for an improvement, please submit an new issue and allow some time for discussion before starting any work on a PR. If you get stuck please don't hesitate to start a discussion with the project maintainers.
