@@ -1,4 +1,6 @@
 -r requirements.txt
 -r test-requirements.txt
-twine==1.8.1
-ipython==6.1.0
+ipython==8.2.0
+bump2version==1.0.1
+wheel==0.37.1
+build==0.7.0
