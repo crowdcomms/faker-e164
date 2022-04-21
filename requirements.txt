@@ -1,2 +1,2 @@
-Faker==0.7.11
-phonenumberslite==8.4.2
+Faker==13.3.5
+phonenumberslite==8.12.46

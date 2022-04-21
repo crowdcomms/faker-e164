@@ -4,11 +4,10 @@ omit =
     ./*/tests/*
     ./.venv/*
     ./.tox/*
-note = Coverage for faker_e164
 # parallel = True
 
 [report]
-fail_under = 50
+fail_under = 80
 include = ./faker_e164/*.py
 show_missing = True
 skip_covered = True
